@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+  input::placeholder {
+ 
+    color:#291507;
+    font-weight: 500
+}
+
+span{
+    @apply text-[#291507];
+    @apply font-Montserrat;
+    @apply font-medium;    
+}
