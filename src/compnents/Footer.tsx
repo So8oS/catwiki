@@ -1,5 +1,5 @@
 import React from 'react'
-import {AiOutlineCopyrightCircle} from 'react-icons/Ai'
+import {AiOutlineCopyrightCircle} from 'react-icons/ai'
 
 
 const Footer = () => {
@@ -17,4 +17,4 @@ const Footer = () => {
 
 export default Footer
 
-//
+////
