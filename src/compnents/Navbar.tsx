@@ -3,7 +3,7 @@ import React from 'react'
 const Navbar = () => {
   return (
     <div className=' self-start mb-5' >
-        <img src="/recources/CatwikiLogo-black.svg" alt="Logo" />
+        <img src="/resources/CatwikiLogo-black.svg" alt="Logo" />
     </div>
     
   )
