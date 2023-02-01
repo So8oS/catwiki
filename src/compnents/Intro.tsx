@@ -46,14 +46,12 @@ lg:bg-[url('/resources/HeroImagelg.png')]"></div>
             <div className='absolute flex flex-col 
             top-4 left-4
             md:top-8 md:left-8
-            lg:top-20 lg:left-20
-
-            ' >
+            lg:top-32 lg:left-48' >
               <img className=' w-20 md:w-44 lg:w-64  2xl:w-80' src="/resources/CatwikiLogo.svg" alt="Logo" />
               <div className=' mb-4  text-[.625rem] md:text-xl xl:text-2xl   text-white font-Montserrat'>Get to know more about<div>your cat breed</div></div>
             
-            <div  className=' h-8 w-24    bg-white rounded-3xl flex items-center justify-between px-2' >
-            <input className='outline-none bg-transparent font-Montserrat w-full placeholder:text-xs ' type="search" placeholder='Search' />
+            <div  className=' h-8 w-24 md:w-full md:h-12 bg-white rounded-3xl flex items-center justify-between px-2' >
+            <input className='outline-none bg-transparent font-Montserrat w-full placeholder:text-xs placeholder:text-sm ' type="search" placeholder='Search' />
             <BiSearchAlt2 className='text-gray-500 ' />
             </div> 
             </div>
