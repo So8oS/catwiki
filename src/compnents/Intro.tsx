@@ -17,15 +17,15 @@ interface top4Props {
 
 const Intro = () => {
 
-// useEffect(() => {
-// axios.get("https://api.thecatapi.com/v1/breeds")
-// .then((res) => {
-// setTop4(res.data as top4Props[] );
-// console.log(res.data)
-// })
-// }, [])
+useEffect(() => {
+axios.get("https://api.thecatapi.com/v1/breeds")
+.then((res) => {
+  setBreeds(res.data as top4Props[] );
+console.log(res.data)
+})
+}, [])
 
-const [top4, setTop4] = useAtom(top4atom)
+const [breeds, setBreeds] = useAtom(top4atom)
 
 
 
@@ -50,17 +50,28 @@ lg:bg-[url('/resources/HeroImagelg.png')]"></div>
               <img className=' w-20 md:w-44 lg:w-64  2xl:w-80' src="/resources/CatwikiLogo.svg" alt="Logo" />
               <div className=' mb-4  text-[.625rem] md:text-xl xl:text-2xl   text-white font-Montserrat'>Get to know more about<div>your cat breed</div></div>
             
-            <div  className=' h-8 w-24 md:w-full md:h-12 bg-white rounded-3xl flex items-center justify-between px-2' >
-            <input className='outline-none bg-transparent font-Montserrat w-full placeholder:text-xs placeholder:text-sm ' type="search" placeholder='Search' />
-            <BiSearchAlt2 className='text-gray-500 ' />
-            </div> 
+            <div className='flex flex-col justify-center gap-4'>
+              <div  className=' h-8 w-24 md:w-full md:h-12 bg-white rounded-3xl flex items-center justify-between px-2' >
+              <input className='outline-none bg-transparent font-Montserrat w-full placeholder:text-xs placeholder:text-sm ' type="search" placeholder='Search' />
+              <BiSearchAlt2 className='text-gray-500 ' />
+              </div>
+              <div  className=' h-56 w-full md:w-full  bg-white rounded-3xl flex flex-col  justify-start p-4 overflow-scroll scroll- gap-4  ' >
+                {
+                  
+                  breeds.map((item) => {
+                    return (
+                        <h1 className='font-medium text-lg ' key={item.id} >{item.name}</h1>
+                    )
+                  })
+                }
+              </div> 
             </div>
+
+              </div>
 
         </div>
 
-    {/* <div className="bg-[url('/resources/HeroImagelg.png')] bg-contain   border border-black h-80 ">
-      
-    </div> */}
+
 
     <div className='w-full h-fit bg-[#E3E1DC] px-4 py-2'>  
     <div className='text-xs font-semibold text-[#291507]  ' >Most Searched Breads</div>
