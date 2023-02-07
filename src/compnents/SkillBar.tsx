@@ -1,5 +1,7 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React from "react";
-const SkillBar = ({ level }) => {
+// @ts-ignore
+const SkillBar = ({ level}) => {
   // create a variable to store the temperament levels
   const Levels = [1, 2, 3, 4, 5];
   // create a variable to store the temperament colors
