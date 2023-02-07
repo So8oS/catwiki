@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import React, { useEffect, useRef,useState } from 'react'
@@ -74,6 +75,7 @@ const Intro = () => {
 
     // closing drop menu 
     const handler = (event: { target: any }) => {
+      //@ts-ignore
       if (!searchReaf.current.contains(event.target)) {
         setOpen(false)
       }
