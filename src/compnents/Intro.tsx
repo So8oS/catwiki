@@ -89,7 +89,7 @@ const Intro = () => {
 
   }, [])
 
-   const searchReaf = useRef();
+   const searchReaf = useRef<HTMLDivElement>(null);
 
 const filteredBreeds = breeds.filter((breed) => {
   return breed.name.toLowerCase().includes(search.toLowerCase())
