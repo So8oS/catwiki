@@ -49,11 +49,11 @@ console.log(currentCat)
             
                 {/* Info div */}
                 <div className='flex flex-col font-medium gap-6' >
-                        <h1 className=' text-3xl font-semibold text-black self-center lg:self-start'>{currentCat?.name}</h1>
-                        <p className=''>{currentCat?.description}</p>
-                        <div className=''>Temperament: {currentCat?.temperament}</div>
-                        <div className=''>Origin: {currentCat?.origin}</div>
-                        <div className=''>Life span: {currentCat?.life_span}</div>
+                        <h1 className=' text-3xl font-semibold text-black '>{currentCat?.name}</h1>
+                        <h1 className='text-lg'>{currentCat?.description}</h1>
+                        <div className=''><span className='font-semibold'>Temperament:</span> {currentCat?.temperament}</div>
+                        <div className=''><span className='font-semibold'>Origin:</span> {currentCat?.origin}</div>
+                        <div className=''><span className='font-semibold'>Life span: </span>{currentCat?.life_span}</div>
             
                     <div className='flex flex-col justify-center  gap-6 '>
                         <div className='flex gap-2 justify-between font-bold'>
