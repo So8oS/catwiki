@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from 'react'
 import {AiOutlineCopyrightCircle} from 'react-icons/ai'
 

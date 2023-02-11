@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
@@ -7,7 +9,6 @@ import axios from 'axios'
 import {breedListAtom, searchAtom} from '../atoms'
 import { useAtom } from 'jotai'
 import { most } from '../most'
-import { useRouter } from 'next/router'
 import Link from 'next/link'
 
 
@@ -59,7 +60,6 @@ export type catBreed = {
 
 const Intro = () => {
 
-  const router = useRouter();
   const [breeds, setBreeds] = useAtom(breedListAtom)
   const [_open, setOpen] = useAtom(searchAtom)
   const[search, setSearch] = useState('')

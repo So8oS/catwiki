@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import {breedListAtom} from '../atoms'

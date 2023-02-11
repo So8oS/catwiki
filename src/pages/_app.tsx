@@ -3,7 +3,6 @@ import { type AppType } from "next/dist/shared/lib/utils";
 import "../styles/globals.css";
 import Navbar from "../compnents/Navbar";
 import Footer from "../compnents/Footer";
-import Specs from "../compnents/Specs";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
