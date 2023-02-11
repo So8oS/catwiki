@@ -1,6 +1,6 @@
 import React from 'react'
-import Specs from '../../compnents/Specs'
-
+import dynamic from 'next/dynamic'
+const Specs = dynamic(() => import('../../compnents/Specs'), {ssr: false})
 const Breeds = () => {
   return (
     <div className='text-[#291507]'>

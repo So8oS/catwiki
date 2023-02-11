@@ -7,6 +7,7 @@ import SkillBar from './SkillBar'
 import axios from 'axios'
 import {morePhotosAtom} from '../atoms'
 import { useAtom } from 'jotai'
+import { specificAtom } from '../atoms'
 
 export type morePhotos = {
     breeds: [];
@@ -19,8 +20,20 @@ export type morePhotos = {
 
 const Specs = () => {
 const [morePhotos, setMorePhotos] = useAtom(morePhotosAtom)
+const router = useRouter();
+const {item} = router.query;
+const breedlist = useAtomValue(breedListAtom)
+const [currentCat, setSpecific] = useAtom(specificAtom)
+
+console.log(currentCat)
+console.log(router.query)
+
 useEffect(() => {
-    axios.get(`https://api.thecatapi.com/v1/images/search?limit=10&breed_ids=${currentCat?.id}`)
+    if(!item){
+        return
+    }
+    setSpecific(breedlist.find((breed) => breed.id === item) as catBreed)
+    axios.get(`https://api.thecatapi.com/v1/images/search?limit=10&breed_ids=${item as string}`)
     .then((res) => {
         setMorePhotos(res.data as morePhotos[])
         console.log(res.data)
@@ -30,13 +43,6 @@ useEffect(() => {
     })
 }, [])
 
-const router = useRouter();
-const query = router.query;
-const breedlist = useAtomValue(breedListAtom)
-const [currentCat] = React.useState(
-    breedlist.find((cat: catBreed ) => cat.id === query.item
-))
-console.log(currentCat)
     return (
         <>
             <div className=' w-full flex flex-col justify-center items-center gap-10
