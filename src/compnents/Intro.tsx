@@ -118,9 +118,9 @@ const filteredBreeds = breeds.filter((breed) => {
               <img className=' w-20 md:w-44 lg:w-64  2xl:w-80' src="/resources/CatwikiLogo.svg" alt="Logo" />
               <div className=' mb-4  text-[.625rem] md:text-xl xl:text-2xl   text-white font-Montserrat'>Get to know more about<div>your cat breed</div></div>
             
-            <div ref={searchReaf}  className='flex flex-col justify-center gap-4'>
-              <div  className=' h-8 w-24 md:w-full md:h-12 bg-white rounded-3xl flex items-center justify-between px-2' >
-              <input className='outline-none bg-transparent font-Montserrat w-full placeholder:text-xs placeholder:text-sm ' 
+            <div ref={searchReaf}  className='flex flex-col justify-center gap-4 '>
+              <div  className=' h-8 w-24 md:w-full md:h-12 bg-white rounded-3xl flex items-center justify-between px-2 md:px-4' >
+              <input className='outline-none bg-transparent font-Montserrat w-full placeholder:text-xs md:placeholder:text-base ' 
               type="search" 
               placeholder='Search'
               onClick={() => {setOpen(true)}}
@@ -166,25 +166,35 @@ const filteredBreeds = breeds.filter((breed) => {
 
 
     <div className='w-full h-fit bg-[#E3E1DC] px-4 py-2'>  
-    <div className='text-xs font-semibold text-[#291507]  ' >Most Searched Breads</div>
+    <div className='text-xs md:text-base lg:text-lg font-semibold text-[#291507]  ' >Most Searched Breads</div>
     <div className="h-1 bg-[#291507] w-12 mt-2  mb-4 rounded-md " ></div>
-    <div className='text-lg font-semibold font-Montserrat' >66+ Breeds for you <div>to discover</div></div>
+    <div className='text-lg lg:text-2xl font-semibold font-Montserrat' >66+ Breeds for you <div>to discover</div></div>
     
     <div className='flex flex-wrap justify-center items-center gap-5 mt-4'>
     {most.map((item) => {
     return (
-      <div  key={item.id} className='flex flex-col justify-center items-center pb-2 '>
+      <Link  key={item.catId} className='flex flex-col justify-center items-center pb-2 '
+      href={{
+        pathname: `/breed/${item.catId}`,
+        query: {
+          item: item.catId ,
+        },
+      }}
+      replace
+      as={`/breed/${item.catId}`}
+      passHref
+      >
 
         <img src={item.image} alt="Top Breads" className=' rounded-2xl mb-2
-        w-32 h-28
+        w-28 h-28
         md:w-36 md:h-32
-        lg:w-56 lg:h-52
-        xl:w-72 xl:h-60
+        lg:w-52 lg:h-52
+        xl:w-56 xl:h-52
         object-cover
         ' />
 
-        <h1 className=' self-start text-xs font-semibold font-Montserrat'>{item.name.split('Cat')[0]}</h1>
-      </div>
+        <h1 className=' text-xs font-semibold font-Montserrat'>{item.name.split('Cat')[0]}</h1>
+      </Link>
     )})}
 
     </div>

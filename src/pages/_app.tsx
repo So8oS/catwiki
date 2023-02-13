@@ -4,6 +4,10 @@ import "../styles/globals.css";
 import Navbar from "../compnents/Navbar";
 import Footer from "../compnents/Footer";
 
+
+
+
+
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
   <div className="flex flex-col justify-center items-center font-Montserrat

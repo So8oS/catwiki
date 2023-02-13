@@ -47,7 +47,7 @@ useEffect(() => {
     return (
         <>
             <div className=' w-full flex flex-col justify-center items-center gap-10
-            lg:flex-row lg:justify-between lg:items-start lg:gap-20 lg-pr-20 xl:pr-40 lg:px-10
+            lg:flex-row lg: lg:items-start lg:gap-20  
             mb-12 
             '>
                 {/* Image div */}
@@ -57,42 +57,42 @@ useEffect(() => {
                 {/* Info div */}
                 <div className='flex flex-col font-medium gap-6' >
                         <h1 className=' text-3xl font-semibold text-black '>{currentCat?.name}</h1>
-                        <h1 className='text-lg'>{currentCat?.description}</h1>
+                        <h1 className='text-lg lg:w-[43rem]'>{currentCat?.description}</h1>
                         <div className=''><span className='font-semibold'>Temperament:</span> {currentCat?.temperament}</div>
                         <div className=''><span className='font-semibold'>Origin:</span> {currentCat?.origin}</div>
                         <div className=''><span className='font-semibold'>Life span: </span>{currentCat?.life_span}</div>
             
                     <div className='flex flex-col justify-center  gap-6 '>
-                        <div className='flex gap-2 justify-between font-bold'>
-                            <h1>Adaptability:</h1>
+                        <div className='flex gap-2  font-bold'>
+                            <h1 className='w-32 md:w-36'>Adaptability:</h1>
                             <SkillBar level={currentCat?.adaptability}/>
                         </div>
-                        <div className='flex gap-2 justify-between font-bold' >
-                            <h1>Affection level:</h1>
+                        <div className='flex gap-2  font-bold' >
+                            <h1 className='w-32 md:w-36'>Affection level:</h1>
                             <SkillBar level={currentCat?.affection_level}/>
                         </div>
-                        <div className='flex gap-2 justify-between font-bold'>
-                            <h1>Child Friend:</h1>
+                        <div className='flex gap-2  font-bold'>
+                            <h1 className='w-32 md:w-36'>Child Friend:</h1>
                             <SkillBar level={currentCat?.child_friendly}/>
                         </div>
-                        <div className='flex gap-2 justify-between font-bold'>
-                            <h1>Grooming:</h1>
+                        <div className='flex gap-2  font-bold'>
+                            <h1 className='w-32 md:w-36'>Grooming:</h1>
                             <SkillBar level={currentCat?.grooming}/>
                         </div>
-                        <div className='flex gap-2 justify-between font-bold'>
-                            <h1>inteligance:</h1>
+                        <div className='flex gap-2  font-bold'>
+                            <h1 className='w-32 md:w-36'>inteligance:</h1>
                             <SkillBar level={currentCat?.intelligence}/>
                         </div>
-                        <div className='flex gap-2 justify-between font-bold'>
-                            <h1>Health Issues:</h1>
+                        <div className='flex gap-2  font-bold'>
+                            <h1 className='w-32 md:w-36'>Health Issues:</h1>
                             <SkillBar level={currentCat?.health_issues}/>
                         </div>
-                        <div className='flex gap-2 justify-between font-bold'>
-                            <h1>Social needs:</h1>
+                        <div className='flex gap-2  font-bold'>
+                            <h1 className='w-32 md:w-36'>Social needs:</h1>
                             <SkillBar level={currentCat?.social_needs}/>
                         </div>
-                        <div className='flex gap-2 justify-between font-bold'>
-                            <h1>Stranger friendly:</h1>
+                        <div className='flex gap-2  font-bold'>
+                            <h1 className='w-32 md:w-36'>Stranger friendly:</h1>
                             <SkillBar level={currentCat?.stranger_friendly}/>
                         </div>
             

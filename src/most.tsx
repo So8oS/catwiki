@@ -1,22 +1,26 @@
 export const most = [
     {
         id: 0,
+        catId: 'beng',
         name: 'Bengal',
-        image: 'http://t1.gstatic.com/licensed-image?q=tbn:ANd9GcQ3brIaGMdpm9AVF8CY9RoPjrw97VLn72UC6gGsse2yNKD1N1NYk080LJwft2vmJKKM1-C93h5_qTKy47g',
+        image: 'https://cdn2.thecatapi.com/images/iWyIaja-G.jpg',
     },
     {
         id: 1,
+        catId: 'sava',
         name: 'Savannah',
-        image: 'https://www.thesprucepets.com/thmb/kHA8E_SPbqoIkT8IFjghsueehSA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/savannah-cat-4ec08e9efe40457a8f73a2af24fcdcc3.jpeg',
+        image: 'https://cdn2.thecatapi.com/images/a8nIYvs6S.jpg',
     },
     {
         id: 2,
+        catId: 'norw',
         name: 'Norwegian Forest Cat',
-        image: 'https://www.thesprucepets.com/thmb/TxIPoTL58BiFEMblaWfBAnGzz9w=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/norwegian-forest-cat-4170085-fe84aa86023446c4b64236ddfbdefd2b.jpg',
+        image: 'https://cdn2.thecatapi.com/images/06dgGmEOV.jpg',
     },
     {
         id: 3,
+        catId: 'srex',
         name: 'Selkirk',
-        image: 'https://www.hillspet.com/content/dam/cp-sites/hills/hills-pet/en_us/exported/cat-care/images/selkirk-rex-on-brown-background.jpg',
+        image: 'https://cdn2.thecatapi.com/images/nhwAjEuEG.jpg',
     },
 ]

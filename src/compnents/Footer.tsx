@@ -12,7 +12,7 @@ const Footer = () => {
         <img className='w-20' src="/resources/CatwikiLogo.svg" alt="" />
         <div className="flex gap-2  ">
             <AiOutlineCopyrightCircle className='text-white ' />
-            <p className='text-white font-normal text-xs'>Created by Ahmad Othman -  30/01/2023</p>
+            <p className='text-white font-normal text-xs text-center'>Created by Ahmad Othman -  30/01/2023</p>
         </div>
     </div>
   )

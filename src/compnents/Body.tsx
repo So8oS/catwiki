@@ -11,9 +11,11 @@ const Body = () => {
           <div className="h-1 bg-[#291507] w-14 mb-4 rounded-md self-start " ></div>
           <h1 className='text-4xl font-extrabold mb-11 '>Why should you have a cat?</h1>
           <p className='text-lg font-medium mb-5' >Having a cat around you can actually trigger the realease of calming chemicals in your body which lower your stress and anxiety levels</p>
-          <div className="flex gap-4 self-start">
-              <p className='text-xs font-bold '>READ MORE</p>
-              <HiOutlineArrowNarrowRight/>
+          <div className="flex self-start">
+              <a className="flex gap-2" target='_blank' rel="noreferrer" href="https://www.goodnet.org/articles/7-scientifically-proven-health-benefits-being-cat-owner">
+                <p className='text-xs font-bold '>READ MORE</p>
+                <HiOutlineArrowNarrowRight/>
+              </a>
           </div>
         </div>
 
