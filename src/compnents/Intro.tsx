@@ -73,7 +73,7 @@ const Intro = () => {
       console.log(err)
     })
 
-    // closing drop menu 
+    //closing drop menu 
     const handler = (event: { target: any }) => {
       //@ts-ignore
       if (!searchReaf.current.contains(event.target)) {
@@ -128,6 +128,7 @@ const filteredBreeds = breeds.filter((breed) => {
                 {(e) => {
                   const searchfield = e.target.value.toLowerCase();
                   setSearch(searchfield);
+                  
                 }
                 
               }
@@ -142,16 +143,14 @@ const filteredBreeds = breeds.filter((breed) => {
                   filteredBreeds.map((item) => {
                     return (
                         <Link
+                        onClick={() => {setOpen(false)}}
                         href={{
                           pathname: `/breed/${item.id}`,
                           query: {
                             item: item.id ,
                           },
                         }}
-                        replace
-                        as={`/breed/${item.id}`}
-                        passHref
-                                            
+                      passHref    
                          className='font-medium text-lg px-4 py-2 hover:bg-[#E3E1DC] p-2 cursor-pointer rounded-xl' key={item.id} >{item.name}</Link>
                     )
                   })
@@ -180,8 +179,7 @@ const filteredBreeds = breeds.filter((breed) => {
           item: item.catId ,
         },
       }}
-      replace
-      as={`/breed/${item.catId}`}
+      
       passHref
       >
 
